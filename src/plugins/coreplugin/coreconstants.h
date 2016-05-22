@@ -30,6 +30,8 @@
 namespace Core {
 namespace Constants {
 
+const char COMPUTER_VISION[] = "Computer Vision";
+
 // Modes
 const char MODE_WELCOME[]          = "Welcome";
 const char MODE_EDIT[]             = "Edit";

@@ -755,6 +755,13 @@ void MainWindow::registerDefaultActions()
         cmd = ActionManager::registerAction(tmpaction, "QtCreator.Help.Sep.About");
         mhelp->addAction(cmd, Constants::G_HELP_ABOUT);
     }
+
+    mhelp->addSeparator(Constants::G_HELP_ABOUT);
+    QAction* cvaction = new QAction(tr("Computer Vision"), this);
+    cmd = ActionManager::registerAction(cvaction, Constants::COMPUTER_VISION);
+    mhelp->addAction(cmd, Constants::G_HELP_ABOUT);
+    cvaction->setEnabled(true);
+    connect(cvaction, &QAction::triggered, this, &MainWindow::aboutPlugins);
 }
 
 void MainWindow::openFile()
